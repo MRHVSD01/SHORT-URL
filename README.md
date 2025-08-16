@@ -26,18 +26,17 @@ It also keeps track of how many times the short link has been visited. 🚀
    git clone https://github.com/MRHVSD01/SHORT-URL.git
    cd SHORT-URL
 2. Install dependencies
- ```bash
+    ```bash
    npm install
 3. Create a .env file in the root folder and add:
- ```bash
+    ```bash
    PORT=8001
    MONGO_URI=mongodb://127.0.0.1:27017/short-url
 4. Start the server
- ```bash
+    ```bash
    npm start
 
 📌 API Endpoints
- ```bash
    POST /url → Create a new short URL
    
    GET /url/:shortId → Redirect to original URL
@@ -45,16 +44,12 @@ It also keeps track of how many times the short link has been visited. 🚀
    GET /url/analytics/:shortId → Get analytics (total clicks & history)
 
 💡 Example
- ```bash
    POST /url
    Body: { "url": "https://example.com" }
 
 Response:
- ```bash
    { "id": "abc123" }
 
-
 Now you can visit:
-    ```bash
    http://localhost:8001/url/abc123
 
