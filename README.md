@@ -39,3 +39,26 @@ MONGO_URI=mongodb://127.0.0.1:27017/short-url
 4. Start the server
 
 npm start
+
+📌 API Endpoints
+
+POST /url → Create a new short URL
+
+GET /url/:shortId → Redirect to original URL
+
+GET /url/analytics/:shortId → Get analytics (total clicks & history)
+
+💡 Example
+POST /url
+Body: { "url": "https://example.com" }
+
+
+Response:
+
+{ "id": "abc123" }
+
+
+Now you can visit:
+
+http://localhost:8001/url/abc123
+
