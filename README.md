@@ -16,7 +16,8 @@ It also keeps track of how many times the short link has been visited. 🚀
 ## 🛠 Tech Stack
 - Node.js  
 - Express.js  
-- MongoDB + Mongoose  
+- MongoDB + Mongoose
+- Basic use of EJS (View Engine) 
 
 ---
 
@@ -42,6 +43,8 @@ It also keeps track of how many times the short link has been visited. 🚀
    GET /url/:shortId → Redirect to original URL
    
    GET /url/analytics/:shortId → Get analytics (total clicks & history)
+
+   GET /url -> render the Home page 
 
 💡 Example
    POST /url
