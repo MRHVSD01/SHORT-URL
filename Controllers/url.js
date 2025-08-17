@@ -15,7 +15,10 @@ async function handleGenerateNewShortURL(req, res) {
     visitHistory: [],
   });
 
-  return res.json({ id: ShortID });
+  res.render('home', {
+    id: ShortID,
+  })
+  // return res.json({ id: ShortID });
 }
 
 async function handleRedirect(req, res) {
@@ -32,7 +35,7 @@ async function handleRedirect(req, res) {
       },
     }
   );
-
+ 
   res.redirect(entry.redirectedURL);
 }
 
